@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>maps</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/index.css" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+        />
+        <style>
+            html, body, #app, main,  #map  {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+            }
+          </style>
+    </head>
+<body>
+    <div id="app">
+      <v-card
+      class="pa-4"
+      flat
+            style="width:100%; height:100%"
+    >
+      <v-toolbar
+        dense
+        floating
+        style="position: absolute; z-index:2"
+      >
+        <v-text-field
+          hide-details
+          prepend-icon="search"
+          single-line
+        ></v-text-field>
+  
+        <v-btn icon>
+          <v-icon>mdi-map</v-icon>
+        </v-btn>
+  
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+      </v-toolbar>
+      <div style="height: 100%; width:100%; position: absolute; top:0; left:0">
+        <router-view></router-view>
+      </div>
+    </v-card>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>
